@@ -8,3 +8,9 @@ jobs:
       run: |
         echo "this is first line"
         echo "this is second line"
+        
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print github context
+      run: echo "${{ toJSON(github) }}"
